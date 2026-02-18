@@ -25,7 +25,7 @@ vamos a poner los valores de 0, -4, y 6 para comprobar que el programa de divisi
       }, () -> {
          Assertions.assertEquals(6, Calculadora.dividir(6, 3), "6 + 3 = 2");
       }, () -> {
-         Assertions.assertEquals(-2, Calculadora.sumar(8, -4), "8 + -4 = -2");
+         Assertions.assertEquals(-2, Calculadora.dividir(8, -4), "8 + -4 = -2");
       }});
    }
 
