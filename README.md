@@ -8,7 +8,7 @@ Haz un fork de este proyecto en tu repositorio de Github y contesta a las siguie
 
 1. ¿Qué sentido puede tener este proyecto y para que lo podrías usar?
 
-Se puede usar para realizar calculos matematicos basicos de suma y division ya que el resto de operaciones no estan implementadas, este programa te lo puedes guardar como libreria para tenerlo por si en algun momento lo necesitas y asi no tienes que codificarlo de nuevo
+Se puede usar para realizar calculos matematicos basicos, este programa te lo puedes guardar como libreria para tenerlo por si en algun momento lo necesitas y asi no tienes que codificarlo de nuevo
 
 2. Revisa las pruebas de la suma y comenta lo que te parezca de interés
 
@@ -16,7 +16,18 @@ Me parece interesante lo facil que se comprueba si estan bien o mal los resultad
 
 3. Realiza un estudio de caja negra de la división e implementa las pruebas en junit: Se realizará en markdown.
 
-vamos a poner los valores de 0, -3, y 7 para comprobar que el programa de division 
+vamos a poner los valores de 0, -4, y 6 para comprobar que el programa de division 
+
+@Test
+   void sumar() {
+      Assertions.assertAll("division", new Executable[]{() -> {
+         Assertions.assertEquals(0, Calculadora.dividir(0, 4), "0 / 4 = 0");
+      }, () -> {
+         Assertions.assertEquals(6, Calculadora.dividir(6, 3), "6 + 3 = 2");
+      }, () -> {
+         Assertions.assertEquals(-2, Calculadora.sumar(8, -4), "8 + -4 = -2");
+      }});
+   }
 
 ## Instrucciones
 
